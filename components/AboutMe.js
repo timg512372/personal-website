@@ -103,11 +103,11 @@ class AboutMe extends Component {
                         textAlign: 'center'
                     }}
                 >
-                    {`I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entreprenurship and helping people with knowlege and technology.`}
+                    {`I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
                 </div>
                 <div
                     style={{
-                        width: '80vw',
+                        width: '90vw',
                         display: 'flex',
                         flexWrap: 'wrap',
                         flexDirection: 'row',
@@ -116,7 +116,11 @@ class AboutMe extends Component {
                     }}
                 >
                     {skills.map(skill => {
-                        return <Meter label={skill.name} value={skill.skill} />;
+                        let id = '';
+                        if (skill.name === 'Administrative Leadership') {
+                            id = 'Technology';
+                        }
+                        return <Meter label={skill.name} value={skill.skill} id={id} />;
                     })}
                 </div>
                 <div style={{ width: '100vw', backgroundColor: '#F6F7F9', padding: '3% 0 5% 0' }}>

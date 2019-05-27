@@ -7,8 +7,10 @@ const SkillMeter = props => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                margin: '0px 10px 0px 10px'
             }}
+            id={props.id}
         >
             <div
                 style={{

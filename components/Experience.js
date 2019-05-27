@@ -10,6 +10,12 @@ const experience = [
                 'At Sage, I developed my passions for technology, public speaking, and social justice. I lead the debate and Academic Decathlon teams along with a multicultural leadership group. I currently have a 4.71 GPA.'
         },
         {
+            date: '2019-2020',
+            title: 'Irvine Valley College',
+            description:
+                'To supplement my education at Sage, I will be pursuing dual enrollment in community college this fall.'
+        },
+        {
             date: '2013-2016',
             title: 'Foothills Middle School',
             description: '4.00 unweighted GPA'
@@ -24,6 +30,13 @@ const experience = [
                 ' and collaborated with the C-suite on strategic vision. ' +
                 'We pitched our product to investors at Global Demo Day 2018. ' +
                 'Working with Dime gave me my first taste of entrepreneurship and Silicon Valley.'
+        },
+
+        {
+            date: 'Summer 2016',
+            title: 'Social Media Intern at Gloss Moderne',
+            description:
+                'As an intern with Gloss Moderne, I designed and implemented a marketing survey and actively engaged social media followers and potential influencers. I also created and maintained marketing and brand pages.'
         }
     ]
 ];

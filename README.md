@@ -1,2 +1,3 @@
 # personal-website
-Personal Website Code
+
+Code base for Tim's personal website.
