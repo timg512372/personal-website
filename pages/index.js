@@ -46,10 +46,24 @@ class Home extends Component {
         cycle: 0,
         textCycle: 0,
         fadeCycle: 0,
-        barOpacity: 0
+        barOpacity: 0,
+        page: 'h'
     };
 
     handleScroll = e => {
+        let scroll = e.target.scrollTop / window.innerHeight;
+        if (scroll < 0.92) {
+            this.setState({ page: 'h' });
+        } else if (scroll < 2.04) {
+            this.setState({ page: 'a' });
+        } else if (scroll < 2.36) {
+            this.setState({ page: 't' });
+        } else if (scroll < 3.66) {
+            this.setState({ page: 'p' });
+        } else {
+            this.setState({ page: 'e' });
+        }
+
         if (this.state.top !== e.target.scrollTop < 100) {
             // let direction = e.target.scrollTo < 100;
             // let fade = setInterval(() => {
@@ -94,7 +108,7 @@ class Home extends Component {
     renderHeader() {
         return (
             <Transition onEnter={animateHeaderIn} onExit={animateHeaderOut} in={this.state.top}>
-                <Header dark={this.state.top} />
+                <Header dark={this.state.top} page={this.state.page} />
             </Transition>
         );
     }
@@ -188,7 +202,7 @@ class Home extends Component {
                     >
                         <Button
                             label="Download CV"
-                            onClick={() => window.scrollTo(0, 400)}
+                            href="https://drive.google.com/file/d/1Ks9PH9Wpb9O3o2BUZ2mT8JFioGv5Qq0W/view?usp=sharing"
                             style={{
                                 color: '#FFFFFF',
                                 borderRadius: '50px',
@@ -241,7 +255,7 @@ class Home extends Component {
                             direction: 'random',
                             out_mode: 'out',
                             bounce: false,
-                            speed: 0, // 10
+                            speed: 10,
                             random: false,
                             attract: {
                                 enable: false,

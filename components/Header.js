@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 const navlinks = [
+    { text: 'Home', link: '#', page: 'h' },
     { text: 'About Me', link: '#AboutMe', page: 'a' },
     { text: 'Technology', link: '#Technology', page: 't' },
     { text: 'Projects', link: '#Projects', page: 'p' },
@@ -57,7 +58,11 @@ class Header extends Component {
                                         <div
                                             className={
                                                 this.props.page === link.page
-                                                    ? `text${this.props.dark ? 'black' : ''} active`
+                                                    ? `text${
+                                                          this.props.dark
+                                                              ? 'black activeblack'
+                                                              : ' active'
+                                                      }`
                                                     : `text${this.props.dark ? 'black' : ''}`
                                             }
                                         >
@@ -78,7 +83,7 @@ class Header extends Component {
                     .textblack:hover {
                         color: black;
                         text-decoration: none;
-                        text-decoration-color: #7ed4c6;
+                        text-decoration-color: rgba(255, 255, 255, 0);
                     }
                     .activeblack {
                         color: black;
@@ -92,7 +97,7 @@ class Header extends Component {
                     .text:hover {
                         color: #6c757d;
                         text-decoration: none;
-                        text-decoration-color: white;
+                        text-decoration-color: rgba(255, 255, 255, 0);
                     }
                     .active {
                         color: #6c757d;

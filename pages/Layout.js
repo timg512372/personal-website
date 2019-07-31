@@ -1,11 +1,4 @@
-import Footer from 'grommet/components/Footer';
 import App from 'grommet/components/App';
-import Title from 'grommet/components/Title';
-import Box from 'grommet/components/Box';
-import Paragraph from 'grommet/components/Paragraph';
-import Anchor from 'grommet/components/Anchor';
-import Menu from 'grommet/components/Menu';
-import Header from 'grommet/components/Header';
 import Article from 'grommet/components/Article';
 
 import '../styles.scss';

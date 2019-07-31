@@ -24,6 +24,18 @@ const projects = [
             "The website for Music Therapy spreads awareness for music and Alzheimer's and highlights the efforts of Music Therapy at Sage.",
         href: 'https://sagehillmusictoheal.org/',
         img: '/static/music.png'
+    },
+    {
+        title: 'Saddle Point',
+        description:
+            'Saddle Point is a simple online platform that organizes school clubs and allows students to easily communicate with and donate to all of their favorite activities.',
+        img: '/static/saddlepoint.png'
+    },
+    {
+        title: 'FairLegal',
+        description:
+            'FairLegal is a platform that allows underprivileged defendants to find legal representation by posting their cases. In return, young and otherwise unemployed lawyers gain experience and a source of income.',
+        img: '/static/fairlegal.png'
     }
 ];
 
@@ -49,7 +61,8 @@ class Projects extends Component {
                         flexDirection: 'row',
                         justifyContent: 'space-around',
                         width: '80vw',
-                        flexWrap: 'wrap'
+                        flexWrap: 'wrap',
+                        marginBottom: '-120px'
                     }}
                 >
                     {projects.map(project => {
@@ -64,6 +77,7 @@ class Projects extends Component {
                                 }
                                 link={<Anchor href={project.href} label="Learn More" />}
                                 key={project.title}
+                                style={{ marginTop: '30px' }}
                             />
                         );
                     })}

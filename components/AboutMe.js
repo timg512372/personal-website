@@ -67,7 +67,7 @@ class AboutMe extends Component {
                     <span style={{ fontWeight: '400' }}>Me</span>
                 </h2>
                 <Divider />
-                <p style={{ fontFamily: 'Nunito', color: '#6c757d' }}>{`Who is this guy?`}</p>
+                {/* <p style={{ fontFamily: 'Nunito', color: '#6c757d' }}>{`Who is this guy?`}</p> */}
                 <img
                     src="/static/pfp.jpg"
                     style={{
@@ -103,7 +103,7 @@ class AboutMe extends Component {
                         textAlign: 'center'
                     }}
                 >
-                    {`I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
+                    {`I'm a student at Sage Hill School and co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
                 </div>
                 <div
                     style={{

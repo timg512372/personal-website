@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
             <html>
                 <Head>
                     <link rel="stylesheet" href="/_next/static/style.css" />
-                    <link rel="shortcut icon" type="image/png" href="/static/favicon.png" />
+                    <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico" />
 
                     <link
                         href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700"
