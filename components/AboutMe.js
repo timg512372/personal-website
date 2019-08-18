@@ -8,6 +8,7 @@ const tech = [
     'Android Studio',
     'React',
     'Redux',
+    'Ionic',
     'NodeJS',
     'MongoDB',
     'Ethereum',
@@ -27,23 +28,31 @@ const skills = [
     },
     {
         name: 'Node.js',
-        skill: 60
-    },
-    {
-        name: 'CSS',
         skill: 80
-    },
-    {
-        name: 'HTML',
-        skill: 55
     },
     {
         name: 'UI Design',
         skill: 70
     },
     {
+        name: 'CSS',
+        skill: 75
+    },
+    {
         name: 'Project Management',
         skill: 80
+    },
+    {
+        name: 'Ionic',
+        skill: 60
+    },
+    {
+        name: 'Public Speaking',
+        skill: 80
+    },
+    {
+        name: 'HTML',
+        skill: 70
     },
     {
         name: 'Administrative Leadership',
@@ -125,7 +134,7 @@ class AboutMe extends Component {
                 </div>
                 <div style={{ width: '100vw', backgroundColor: '#F6F7F9', padding: '3% 0 5% 0' }}>
                     <h2 style={{ marginBottom: '-0.1em', fontSize: '180%', textAlign: 'center' }}>
-                        <span style={{ fontWeight: '600' }}>Technology</span>{' '}
+                        <span style={{ fontWeight: '600' }}>Technologies</span>{' '}
                         <span style={{ fontWeight: '400' }}>I've worked with</span>
                     </h2>
                     <Divider />

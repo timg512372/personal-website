@@ -7,13 +7,20 @@ const experience = [
             date: '2016-2020',
             title: 'Sage Hill School',
             description:
-                'At Sage, I developed my passions for technology, public speaking, and social justice. I lead the debate and Academic Decathlon teams along with a multicultural leadership group. I currently have a 4.71 GPA.'
+                'At Sage, I developed my passions for technology, public speaking, and social justice. I lead the debate and Academic Decathlon teams along with a multicultural leadership group. I currently hold a 4.71 GPA.'
         },
         {
             date: '2019-2020',
             title: 'Irvine Valley College',
             description:
                 'To supplement my education at Sage, I will be pursuing dual enrollment in community college this fall.'
+        },
+        {
+            date: 'Summer 2019',
+            title: 'LaunchX at MIT',
+            description:
+                'LaunchX at MIT is a highly selective summer program for aspiring high school entrepreneurs.' +
+                'During the four weeks of LaunchX, I completed rigorous coursework from professors at MIT Sloan and Harvard Business School. I also collaborated with my classmates to create a startup, Badge, which attracted considerable interest from venture capitalists.'
         },
         {
             date: '2013-2016',
@@ -31,7 +38,12 @@ const experience = [
                 'We pitched our product to investors at Global Demo Day 2018. ' +
                 'Working with Dime gave me my first taste of entrepreneurship and Silicon Valley.'
         },
-
+        {
+            date: 'Summer 2019',
+            title: 'Marketing and Development Intern at Linden Educational Services',
+            description:
+                "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements."
+        },
         {
             date: 'Summer 2016',
             title: 'Social Media Intern at Gloss Moderne',

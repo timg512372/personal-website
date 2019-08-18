@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 const navlinks = [
-    { text: 'Home', link: '#', page: 'h' },
+    { text: 'Home', link: '#Home', page: 'h' },
     { text: 'About Me', link: '#AboutMe', page: 'a' },
     { text: 'Technology', link: '#Technology', page: 't' },
     { text: 'Projects', link: '#Projects', page: 'p' },

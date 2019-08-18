@@ -124,7 +124,7 @@ class Home extends Component {
             <div>
                 {this.renderHeader()}
                 <div style={{ overflowY: 'scroll', height: '100vh' }} onScroll={this.handleScroll}>
-                    <div style={{ color: 'white', textAlign: 'center' }}>
+                    <div style={{ color: 'white', textAlign: 'center' }} id="Home">
                         {this.renderParticles()}
                         <img
                             src="/static/background.jpg"
