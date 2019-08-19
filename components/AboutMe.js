@@ -68,7 +68,8 @@ class AboutMe extends Component {
                     width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    marginTop: this.props.desktop ? '0px' : '30vh'
                 }}
             >
                 <h2 style={{ marginBottom: '-0.1em', fontSize: '180%' }}>
@@ -96,19 +97,31 @@ class AboutMe extends Component {
                         color: '#6c757d',
                         fontWeight: '700',
                         fontFamily: 'Nunito',
-                        margin: '30px'
+                        margin: '30px',
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        flexWrap: 'wrap'
                     }}
                 >
-                    Student<span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
-                    Developer<span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
-                    Entrepreneur<span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
-                    Public Speaker
+                    <div>
+                        Student<span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
+                        Developer
+                    </div>
+                    {this.props.desktop ? (
+                        <span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
+                    ) : null}
+                    <div>
+                        Entrepreneur<span style={{ fontWeight: '400' }}>&emsp;&#8226;&emsp;</span>
+                        Public Speaker
+                    </div>
                 </h4>
                 <div
                     style={{
                         fontFamily: 'Nunito',
                         color: '#6c757d',
-                        width: '40vw',
+                        width: this.props.desktop ? '40vw' : '80vw',
                         textAlign: 'center'
                     }}
                 >
@@ -129,11 +142,26 @@ class AboutMe extends Component {
                         if (skill.name === 'Administrative Leadership') {
                             id = 'Technology';
                         }
-                        return <Meter label={skill.name} value={skill.skill} id={id} />;
+                        return (
+                            <Meter
+                                label={skill.name}
+                                value={skill.skill}
+                                id={id}
+                                desktop={this.props.desktop}
+                            />
+                        );
                     })}
                 </div>
                 <div style={{ width: '100vw', backgroundColor: '#F6F7F9', padding: '3% 0 5% 0' }}>
-                    <h2 style={{ marginBottom: '-0.1em', fontSize: '180%', textAlign: 'center' }}>
+                    <h2
+                        style={{
+                            margin: this.props.desktop
+                                ? '0px 0px -0.1em 0px'
+                                : '0px 2vw -0.1em 2vw',
+                            fontSize: '180%',
+                            textAlign: 'center'
+                        }}
+                    >
                         <span style={{ fontWeight: '600' }}>Technologies</span>{' '}
                         <span style={{ fontWeight: '400' }}>I've worked with</span>
                     </h2>
@@ -151,7 +179,14 @@ class AboutMe extends Component {
                     >
                         {tech.map(x => {
                             return (
-                                <img src={`/static/${x}.svg`} style={{ height: '10vh' }} alt={x} />
+                                <img
+                                    src={`/static/${x}.svg`}
+                                    style={{
+                                        height: '10vh',
+                                        marginBottom: this.props.desktop ? '0px' : '2vh'
+                                    }}
+                                    alt={x}
+                                />
                             );
                         })}
                     </div>

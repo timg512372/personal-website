@@ -112,7 +112,7 @@ class Experience extends Component {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    margin: '0 0 5% 0',
+                    margin: this.props.desktop ? '0 0 5% 0' : '20vh 0 5% 0',
                     //backgroundColor: '#F6F7F9',
                     padding: '5% 0 5% 0'
                 }}
@@ -125,7 +125,7 @@ class Experience extends Component {
                 <div
                     style={{
                         display: 'flex',
-                        flexDirection: 'row',
+                        flexDirection: this.props.desktop ? 'row' : 'column',
                         justifyContent: 'space-around',
                         width: '90vw',
                         margin: '0vw 5vw 0vw 5vw'
@@ -135,7 +135,7 @@ class Experience extends Component {
                         return (
                             <div
                                 style={{
-                                    width: '600px',
+                                    width: this.props.desktop ? '600px' : '90vw',
                                     //height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column'

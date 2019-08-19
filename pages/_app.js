@@ -5,6 +5,8 @@ import NextSeo from 'next-seo';
 import '../styles.scss';
 import Layout from './Layout';
 
+var parser = require('ua-parser-js');
+
 const DEFAULT_SEO = {
     title: "I'm Timothy Guo",
     description:
@@ -34,15 +36,15 @@ const DEFAULT_SEO = {
 //Custom app.js to add Redux and a universal toolbar --> DO NOT RENAME
 export default (class MyApp extends App {
     static async getInitialProps({ Component, ctx, req, query, store }) {
+        const ua = parser(ctx.req ? ctx.req.headers['user-agent'] : navigator.userAgent);
+        console.log(ua.device.type);
         return {
-            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
+            pageProps: {
+                ...(Component.getInitialProps ? await Component.getInitialProps(ctx) : {}),
+                desktop: ua.device.type != 'mobile'
+            }
         };
     }
-
-    // componentDidMount() {
-    //     initGA();
-    //     logPageView();
-    // }
 
     render() {
         const { Component, pageProps } = this.props;

@@ -81,6 +81,7 @@ class Home extends Component {
     };
 
     componentDidMount() {
+        console.log(this.props.desktop);
         this.animation = setInterval(() => {
             let { cycle, textCycle } = this.state;
             if (cycle == 300) {
@@ -122,7 +123,7 @@ class Home extends Component {
         }
         return (
             <div>
-                {this.renderHeader()}
+                {this.props.desktop ? this.renderHeader() : null}
                 <div style={{ overflowY: 'scroll', height: '100vh' }} onScroll={this.handleScroll}>
                     <div style={{ color: 'white', textAlign: 'center' }} id="Home">
                         {this.renderParticles()}
@@ -149,7 +150,7 @@ class Home extends Component {
                         <div
                             style={{
                                 margin: '1px 0px 0px 0px',
-                                fontSize: '430%',
+                                fontSize: this.props.desktop ? '430%' : '300%',
                                 fontWeight: '300',
                                 zIndex: 10
                             }}
@@ -158,7 +159,7 @@ class Home extends Component {
                             <span style={{ fontWeight: '600', opacity: this.state.opacity }}>
                                 {' '}
                                 {text}
-                                {'. '}
+                                {'.'}
                             </span>
                         </div>
                     </div>
@@ -212,13 +213,13 @@ class Home extends Component {
                         />
                     </div>
                     <div id="AboutMe" style={{ marginTop: '-70px', marginBottom: '70px' }} />
-                    <AboutMe />
+                    <AboutMe desktop={this.props.desktop} />
                     <div id="Projects" />
                     <Projects />
                     <div id="Experience">
-                        <Experience />
+                        <Experience desktop={this.props.desktop} />
                     </div>
-                    <Footer />
+                    <Footer desktop={this.props.desktop} />
                 </div>
             </div>
         );

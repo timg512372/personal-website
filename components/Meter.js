@@ -22,8 +22,12 @@ const SkillMeter = props => {
                     fontFamily: 'Nunito'
                 }}
             >
-                <div style={{ fontWeight: 'bold', fontSize: '110%' }}>{props.label}</div>
-                <div style={{ color: '#6c757d' }}>{props.value}%</div>
+                <div style={{ fontWeight: 'bold', fontSize: props.desktop ? '110%' : '80%' }}>
+                    {props.label}
+                </div>
+                <div style={{ color: '#6c757d', fontSize: props.desktop ? '100%' : '70%' }}>
+                    {props.value}%
+                </div>
             </div>
             <Meter value={props.value} size="large" style={{ borderRadius: '10px' }} />
         </div>

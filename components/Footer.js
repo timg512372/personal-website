@@ -16,18 +16,16 @@ class CustomFooter extends Component {
                 <div
                     style={{
                         display: 'flex',
-                        flexDirection: 'column',
+                        flexDirection: 'row',
                         alignItems: 'center',
+                        justifyContent: 'center',
+                        flexWrap: 'wrap',
                         width: '100vw',
                         backgroundColor: '#F6F7F9'
                     }}
                 >
-                    {/* <Title>
-                        <s />
-                        Timothy Guo
-                    </Title> */}
-                    <Box direction="row" align="center" pad={{ between: 'medium' }}>
-                        <Paragraph margin="none">©2019 Timothy Guo</Paragraph>
+                    <Paragraph margin="none">©2019 Timothy Guo</Paragraph>
+                    <div style={{ marginLeft: '20px' }}>
                         <Anchor
                             icon={<MailIcon colorIndex="accent" />}
                             href="mailto: timg51237@gmail.com"
@@ -48,7 +46,7 @@ class CustomFooter extends Component {
                             href="https://github.com/timg512372"
                             style={{ zIndex: 10 }}
                         />
-                    </Box>
+                    </div>
                 </div>
             </Footer>
         );
