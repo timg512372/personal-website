@@ -35,7 +35,15 @@ const projects = [
         title: 'FairLegal',
         description:
             'FairLegal is a platform that allows underprivileged defendants to find legal representation by posting their cases. In return, young and otherwise unemployed lawyers gain experience and a source of income.',
-        img: '/static/fairlegal.png'
+        img: '/static/fairlegal.png',
+        href: 'https://fairlegal-react.herokuapp.com/'
+    },
+    {
+        title: 'Mystic',
+        description:
+            'Mystic is the ultimate unofficial companion app for Magic: The Gathering. With a clean user interface and a wide range of functionality, including card search, news feed, life counter, and tournament scheduler, it deserves a slot on the screen of players everywhere.',
+        img: '/static/mystic.png',
+        href: 'https://play.google.com/store/apps/details?id=com.goldin.mystic'
     }
 ];
 
