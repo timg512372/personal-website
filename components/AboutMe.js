@@ -3,9 +3,11 @@ import Divider from './Divider';
 import Meter from './Meter';
 
 const tech = [
+    'C',
     'Java',
     'Python',
     'Android Studio',
+    'Unity',
     'React',
     'Redux',
     'Ionic',
@@ -14,50 +16,50 @@ const tech = [
     'Ethereum',
     'Cloudinary',
     'Firebase',
-    'Heroku'
+    'Heroku',
 ];
 
 const skills = [
     {
         name: 'React / React Native',
-        skill: 90
+        skill: 90,
     },
     {
         name: 'Java',
-        skill: 80
+        skill: 80,
     },
     {
         name: 'Node.js',
-        skill: 80
+        skill: 80,
     },
     {
         name: 'UI Design',
-        skill: 70
+        skill: 70,
     },
     {
         name: 'CSS',
-        skill: 75
+        skill: 75,
     },
     {
         name: 'Project Management',
-        skill: 80
+        skill: 80,
     },
     {
         name: 'Ionic',
-        skill: 60
+        skill: 60,
     },
     {
         name: 'Public Speaking',
-        skill: 80
+        skill: 80,
     },
     {
         name: 'HTML',
-        skill: 70
+        skill: 70,
     },
     {
         name: 'Administrative Leadership',
-        skill: 70
-    }
+        skill: 70,
+    },
 ];
 
 class AboutMe extends Component {
@@ -69,7 +71,7 @@ class AboutMe extends Component {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    marginTop: this.props.desktop ? '0px' : '30vh'
+                    marginTop: this.props.desktop ? '0px' : '30vh',
                 }}
             >
                 <h2 style={{ marginBottom: '-0.1em', fontSize: '180%' }}>
@@ -83,7 +85,7 @@ class AboutMe extends Component {
                     style={{
                         borderRadius: '50%',
                         height: '15vw',
-                        margin: '20px 0 40px 0'
+                        margin: '20px 0 40px 0',
                     }}
                     alt="me"
                 />
@@ -102,7 +104,7 @@ class AboutMe extends Component {
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'center',
-                        flexWrap: 'wrap'
+                        flexWrap: 'wrap',
                     }}
                 >
                     <div>
@@ -122,7 +124,7 @@ class AboutMe extends Component {
                         fontFamily: 'Nunito',
                         color: '#6c757d',
                         width: this.props.desktop ? '40vw' : '80vw',
-                        textAlign: 'center'
+                        textAlign: 'center',
                     }}
                 >
                     {`I'm a student at Sage Hill School and co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
@@ -134,10 +136,10 @@ class AboutMe extends Component {
                         flexWrap: 'wrap',
                         flexDirection: 'row',
                         justifyContent: 'space-around',
-                        margin: '40px 0 20px 0'
+                        margin: '40px 0 20px 0',
                     }}
                 >
-                    {skills.map(skill => {
+                    {skills.map((skill) => {
                         let id = '';
                         if (skill.name === 'Administrative Leadership') {
                             id = 'Technology';
@@ -159,7 +161,7 @@ class AboutMe extends Component {
                                 ? '0px 0px -0.1em 0px'
                                 : '0px 2vw -0.1em 2vw',
                             fontSize: '180%',
-                            textAlign: 'center'
+                            textAlign: 'center',
                         }}
                     >
                         <span style={{ fontWeight: '600' }}>Technologies</span>{' '}
@@ -174,16 +176,16 @@ class AboutMe extends Component {
                             alignItems: 'center',
                             width: '90vw',
                             margin: '0vw 5vw 0vw 5vw',
-                            flexWrap: 'wrap'
+                            flexWrap: 'wrap',
                         }}
                     >
-                        {tech.map(x => {
+                        {tech.map((x) => {
                             return (
                                 <img
                                     src={`/static/${x}.svg`}
                                     style={{
                                         height: '10vh',
-                                        marginBottom: this.props.desktop ? '0px' : '2vh'
+                                        marginBottom: this.props.desktop ? '0px' : '2vh',
                                     }}
                                     alt={x}
                                 />
