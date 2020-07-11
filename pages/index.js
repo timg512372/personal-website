@@ -16,7 +16,7 @@ import Experience from '../components/Experience';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-const animateHeaderIn = header => {
+const animateHeaderIn = (header) => {
     console.log('abcdef');
     return anime({
         targets: header,
@@ -24,18 +24,18 @@ const animateHeaderIn = header => {
         //filter: ['blur(7px)', 'blur(0px)'],
         boxShadow: ['0px 3px 4px rgba(237, 237, 237, 1)', '0px 3px 4px rgba(237, 237, 237, 0)'],
         easing: 'easeOutCubic',
-        duration: 500
+        duration: 500,
     });
 };
 
-const animateHeaderOut = header => {
+const animateHeaderOut = (header) => {
     return anime({
         targets: header,
         backgroundColor: ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)'],
         //filter: ['blur(7px)', 'blur(0px)'],
         boxShadow: ['0px 3px 4px rgba(237, 237, 237, 0)', '0px 3px 4px rgba(237, 237, 237, 1)'],
         easing: 'easeOutCubic',
-        duration: 500
+        duration: 500,
     });
 };
 
@@ -47,10 +47,10 @@ class Home extends Component {
         textCycle: 0,
         fadeCycle: 0,
         barOpacity: 0,
-        page: 'h'
+        page: 'h',
     };
 
-    handleScroll = e => {
+    handleScroll = (e) => {
         let scroll = e.target.scrollTop / window.innerHeight;
         if (scroll < 0.92) {
             this.setState({ page: 'h' });
@@ -133,7 +133,7 @@ class Home extends Component {
                                 height: '100vh',
                                 width: '100vw',
                                 marginTop: '-100vh',
-                                zIndex: -1
+                                zIndex: -1,
                             }}
                             alt="background"
                         />
@@ -142,7 +142,7 @@ class Home extends Component {
                                 margin: '-65vh 0px 0px 0px',
                                 fontSize: '160%',
                                 fontWeight: '400',
-                                zIndex: '10'
+                                zIndex: '10',
                             }}
                         >
                             Hello & Welcome
@@ -152,7 +152,7 @@ class Home extends Component {
                                 margin: '1px 0px 0px 0px',
                                 fontSize: this.props.desktop ? '430%' : '300%',
                                 fontWeight: '300',
-                                zIndex: 10
+                                zIndex: 10,
                             }}
                         >
                             I Am{' '}
@@ -167,7 +167,7 @@ class Home extends Component {
                         style={{
                             display: 'flex',
                             justifyContent: 'center',
-                            flexDirection: 'row'
+                            flexDirection: 'row',
                         }}
                     >
                         <Anchor
@@ -198,7 +198,7 @@ class Home extends Component {
                             flexDirection: 'row',
                             justifyContent: 'center',
                             margin: '2% 0 0 0',
-                            zIndex: 10
+                            zIndex: 10,
                         }}
                     >
                         <Button
@@ -208,14 +208,14 @@ class Home extends Component {
                                 color: '#FFFFFF',
                                 borderRadius: '50px',
                                 marginBottom: '27%',
-                                zIndex: '10'
+                                zIndex: '10',
                             }}
                         />
                     </div>
                     <div id="AboutMe" style={{ marginTop: '-70px', marginBottom: '70px' }} />
                     <AboutMe desktop={this.props.desktop} />
                     <div id="Projects" />
-                    <Projects />
+                    <Projects desktop={this.props.desktop} />
                     <div id="Experience">
                         <Experience desktop={this.props.desktop} />
                     </div>
@@ -232,24 +232,24 @@ class Home extends Component {
                 style={{
                     height: '100%',
                     width: '100%',
-                    zIndex: -2
+                    zIndex: -2,
                 }}
                 width="100vw"
                 height="98vh"
                 params={{
                     particles: {
                         number: {
-                            value: 200
+                            value: 200,
                         },
                         size: {
                             value: 4,
-                            random: true
+                            random: true,
                         },
                         opacity: {
-                            value: 0.9
+                            value: 0.9,
                         },
                         color: {
-                            value: '#FFFFFF'
+                            value: '#FFFFFF',
                         },
                         move: {
                             enable: true,
@@ -261,31 +261,31 @@ class Home extends Component {
                             attract: {
                                 enable: false,
                                 rotateX: 0,
-                                rotateY: 0
-                            }
+                                rotateY: 0,
+                            },
                         },
                         line_linked: {
                             distance: 100,
                             color: '#FFFFFF',
                             opacity: 0.4,
-                            width: 1.3
-                        }
+                            width: 1.3,
+                        },
                     },
                     interactivity: {
                         events: {
                             onhover: {
                                 enable: true,
-                                mode: 'repulse'
-                            }
+                                mode: 'repulse',
+                            },
                         },
                         modes: {
                             repulse: {
                                 distance: 100,
-                                duration: 1
-                            }
-                        }
+                                duration: 1,
+                            },
+                        },
                     },
-                    retina_detect: true
+                    retina_detect: true,
                 }}
             />
         );

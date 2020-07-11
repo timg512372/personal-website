@@ -4,31 +4,45 @@ import Divider from './Divider';
 const experience = [
     [
         {
+            date: '2020-2024',
+            title: 'UC Berkeley',
+            description:
+                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science",
+        },
+        {
             date: '2016-2020',
             title: 'Sage Hill School',
             description:
-                'At Sage, I developed my passions for technology, public speaking, and social justice. I lead the debate and Academic Decathlon teams along with a multicultural leadership group. I currently hold a 4.71 GPA.'
+                'At Sage, I developed my passions for technology, public speaking, and social justice. I lead the debate and Academic Decathlon teams along with a multicultural leadership group. I held a cumulative 4.51 GPA.',
         },
         {
             date: '2019-2020',
             title: 'Irvine Valley College',
             description:
-                'To supplement my education at Sage, I will be pursuing dual enrollment in community college this fall.'
+                'To supplement my education at Sage, I pursued dual enrollment in community college.',
         },
         {
             date: 'Summer 2019',
             title: 'LaunchX at MIT',
             description:
                 'LaunchX at MIT is a highly selective summer program for aspiring high school entrepreneurs.' +
-                'During the four weeks of LaunchX, I completed rigorous coursework from professors at MIT Sloan and Harvard Business School. I also collaborated with my classmates to create a startup, Badge, which attracted considerable interest from venture capitalists.'
+                'During the four weeks of LaunchX, I completed rigorous coursework from professors at MIT Sloan and Harvard Business School. I also collaborated with my classmates to create a startup, Badge, which attracted considerable interest from venture capitalists.',
         },
         {
             date: '2013-2016',
             title: 'Foothills Middle School',
-            description: '4.00 unweighted GPA'
-        }
+            description: '4.00 unweighted GPA',
+        },
     ],
     [
+        {
+            date: 'Summer 2020',
+            title: 'Blockchain Intern at Byte to Byte, LLC',
+            description:
+                'As an intern with Byte to Byte, I wrote application back-ends using ' +
+                'Ethereum and Hyperledger Fabric. I researched and implemented L2 scaling solutions ' +
+                'such as optimistic rollups, plasma chains, and side chains. ',
+        },
         {
             date: '2018-present',
             title: 'COO of Dime',
@@ -36,21 +50,21 @@ const experience = [
                 'As COO of Dime, I led the development of the front-end web platform.' +
                 ' and collaborated with the C-suite on strategic vision. ' +
                 'We pitched our product to investors at Global Demo Day 2018. ' +
-                'Working with Dime gave me my first taste of entrepreneurship and Silicon Valley.'
+                'Working with Dime gave me my first taste of entrepreneurship and Silicon Valley.',
         },
         {
             date: 'Summer 2019',
             title: 'Marketing and Development Intern at Linden Educational Services',
             description:
-                "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements."
+                "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements.",
         },
         {
             date: 'Summer 2016',
             title: 'Social Media Intern at Gloss Moderne',
             description:
-                'As an intern with Gloss Moderne, I designed and implemented a marketing survey and actively engaged social media followers and potential influencers. I also created and maintained marketing and brand pages.'
-        }
-    ]
+                'As an intern with Gloss Moderne, I designed and implemented a marketing survey and actively engaged social media followers and potential influencers. I also created and maintained marketing and brand pages.',
+        },
+    ],
 ];
 
 class Experience extends Component {
@@ -61,7 +75,7 @@ class Experience extends Component {
                     width: '100%',
                     display: 'flex',
                     flexDirection: 'row',
-                    alignItems: 'flex-start'
+                    alignItems: 'flex-start',
                 }}
             >
                 <div
@@ -71,7 +85,7 @@ class Experience extends Component {
                         fontSize: '500%',
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'center'
+                        alignItems: 'center',
                     }}
                 >
                     <span style={{ zIndex: 2 }}>&#8226;</span>
@@ -81,7 +95,7 @@ class Experience extends Component {
                             height: '100%',
                             backgroundColor: '#E1E1E1',
                             margin: '-110px 10px -10px 10px',
-                            zIndex: 1
+                            zIndex: 1,
                         }}
                     />
                 </div>
@@ -93,7 +107,7 @@ class Experience extends Component {
                         borderWidth: '2px',
                         borderStyle: 'solid',
                         padding: '20px 20px 10px 30px',
-                        width: '500px'
+                        width: '500px',
                     }}
                 >
                     <div style={{ fontWeight: 'bold', fontFamily: 'Nunito' }}>{exp.date}</div>
@@ -114,7 +128,7 @@ class Experience extends Component {
                     alignItems: 'center',
                     margin: this.props.desktop ? '0 0 5% 0' : '20vh 0 5% 0',
                     //backgroundColor: '#F6F7F9',
-                    padding: '5% 0 5% 0'
+                    padding: '5% 0 5% 0',
                 }}
             >
                 <h2 style={{ marginBottom: '-0.1em', fontSize: '180%', textAlign: 'center' }}>
@@ -128,20 +142,20 @@ class Experience extends Component {
                         flexDirection: this.props.desktop ? 'row' : 'column',
                         justifyContent: 'space-around',
                         width: '90vw',
-                        margin: '0vw 5vw 0vw 5vw'
+                        margin: '0vw 5vw 0vw 5vw',
                     }}
                 >
-                    {experience.map(category => {
+                    {experience.map((category) => {
                         return (
                             <div
                                 style={{
                                     width: this.props.desktop ? '600px' : '90vw',
                                     //height: '100%',
                                     display: 'flex',
-                                    flexDirection: 'column'
+                                    flexDirection: 'column',
                                 }}
                             >
-                                {category.map(exp => {
+                                {category.map((exp) => {
                                     return this.renderExperience(exp);
                                 })}
                             </div>

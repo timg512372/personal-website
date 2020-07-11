@@ -14,6 +14,8 @@ const tech = [
     'NodeJS',
     'MongoDB',
     'Ethereum',
+    'Hyperledger',
+    'Tensorflow',
     'Cloudinary',
     'Firebase',
     'Heroku',
@@ -25,11 +27,11 @@ const skills = [
         skill: 90,
     },
     {
-        name: 'Java',
-        skill: 80,
+        name: 'Node.js',
+        skill: 90,
     },
     {
-        name: 'Node.js',
+        name: 'Java',
         skill: 80,
     },
     {
@@ -37,7 +39,7 @@ const skills = [
         skill: 70,
     },
     {
-        name: 'CSS',
+        name: 'Python',
         skill: 75,
     },
     {
@@ -127,7 +129,8 @@ class AboutMe extends Component {
                         textAlign: 'center',
                     }}
                 >
-                    {`I'm a student at Sage Hill School and co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
+                    {`I'm a Regents Scholar at UC Berkeley and co-founder and COO at Dime, a startup in decentralized blockchain gaming.` +
+                        ` I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
                 </div>
                 <div
                     style={{

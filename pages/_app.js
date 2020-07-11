@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import NextSeo from 'next-seo';
 
 import '../styles.scss';
@@ -10,25 +10,25 @@ var parser = require('ua-parser-js');
 const DEFAULT_SEO = {
     title: "I'm Timothy Guo",
     description:
-        "I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.",
+        "I'm a Regents Scholar at UC Berkeley and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.",
     openGraph: {
         type: 'website',
         locale: 'en_IE',
-        url: 'https://www.musictoheal.org/',
+        url: 'https://personal-website.timg51237.now.sh/',
         title: "I'm Timothy Guo",
         description:
-            "I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.",
+            "I'm a Regents Scholar at UC Berkeley and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.",
         image: '/static/favicon.png',
         site_name: "I'm Timothy Guo",
         imageWidth: 1200,
-        imageHeight: 1200
+        imageHeight: 1200,
     },
     twitter: {
         title: "I'm Timothy Guo",
         cardType: 'summary_large_image',
         description:
-            "I'm a student at Sage Hill School and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology."
-    }
+            "I'm a Regents Scholar at UC Berkeley and Co-founder and COO at Dime, a startup in decentralized blockchain gaming. I'm passionate about social entrepreneurship and helping people with knowledge and technology.",
+    },
 };
 
 //import { initGA, logPageView } from '../components/general/analytics';
@@ -41,8 +41,8 @@ export default (class MyApp extends App {
         return {
             pageProps: {
                 ...(Component.getInitialProps ? await Component.getInitialProps(ctx) : {}),
-                desktop: ua.device.type != 'mobile'
-            }
+                desktop: ua.device.type != 'mobile',
+            },
         };
     }
 
@@ -50,12 +50,12 @@ export default (class MyApp extends App {
         const { Component, pageProps } = this.props;
 
         return (
-            <Container>
+            <>
                 <NextSeo config={DEFAULT_SEO} />
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
-            </Container>
+            </>
         );
     }
 });
