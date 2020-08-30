@@ -203,7 +203,7 @@ class Home extends Component {
                     >
                         <Button
                             label="Download CV"
-                            href="https://drive.google.com/file/d/1Ks9PH9Wpb9O3o2BUZ2mT8JFioGv5Qq0W/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1dsXlD7NW6g-aVm2p_6gBh3dUOGIeQZgq/view?usp=sharing"
                             style={{
                                 color: '#FFFFFF',
                                 borderRadius: '50px',

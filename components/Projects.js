@@ -9,7 +9,7 @@ const projects = [
         title: 'Dime',
         description:
             'Dime is a digital sports league where basketball players are registered as Blockchain tokens that are unique, tradable and non-fungible financial assets. These assets grow and develop through tournament style leagues with Ether prizes.',
-        href: 'https://dimedrop.io',
+        href: 'https://dime-react.herokuapp.com/',
         img: '/static/dime.png',
         awards: [
             'Won AngelHack Los Angeles 2018',
