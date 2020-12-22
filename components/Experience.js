@@ -7,7 +7,7 @@ const experience = [
             date: '2020-2024',
             title: 'UC Berkeley',
             description:
-                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science",
+                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science. So far, I am a part of Blockchain at Berkeley and Debate Society of Berkeley.",
         },
         {
             date: '2016-2020',
@@ -36,12 +36,19 @@ const experience = [
     ],
     [
         {
-            date: 'Summer 2020',
+            date: '2020-present',
+            title: 'Full Stack Developer at Blockchain at Berkeley',
+            description:
+                'As a developer in Blockchain at Berkeley, I led an internal project to create a decentralized tracker for COVID-19 vaccines. I also suggested reforms of new developer education.',
+        },
+        {
+            date: '2020-present',
             title: 'Blockchain Intern at Byte to Byte, LLC',
             description:
                 'As an intern with Byte to Byte, I wrote application back-ends using ' +
                 'Ethereum and Hyperledger Fabric. I researched and implemented L2 scaling solutions ' +
-                'such as optimistic rollups, plasma chains, and side chains. ',
+                'such as optimistic rollups, plasma chains, and side chains. I also created a cross-platform' +
+                'production app for a collaboration with Marwin Sports.',
         },
         {
             date: '2018-present',
@@ -57,12 +64,6 @@ const experience = [
             title: 'Marketing and Development Intern at Linden Educational Services',
             description:
                 "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements.",
-        },
-        {
-            date: 'Summer 2016',
-            title: 'Social Media Intern at Gloss Moderne',
-            description:
-                'As an intern with Gloss Moderne, I designed and implemented a marketing survey and actively engaged social media followers and potential influencers. I also created and maintained marketing and brand pages.',
         },
     ],
 ];

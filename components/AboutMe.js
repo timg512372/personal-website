@@ -6,6 +6,7 @@ const tech = [
     'C',
     'Java',
     'Python',
+    'Xcode',
     'Android Studio',
     'Unity',
     'React',
@@ -13,6 +14,7 @@ const tech = [
     'Ionic',
     'NodeJS',
     'MongoDB',
+    'SQL',
     'Ethereum',
     'Hyperledger',
     'Tensorflow',
@@ -40,15 +42,15 @@ const skills = [
     },
     {
         name: 'Python',
-        skill: 75,
+        skill: 80,
     },
     {
         name: 'Project Management',
         skill: 80,
     },
     {
-        name: 'Ionic',
-        skill: 60,
+        name: 'Ethereum',
+        skill: 70,
     },
     {
         name: 'Public Speaking',
@@ -187,7 +189,7 @@ class AboutMe extends Component {
                                 <img
                                     src={`/static/${x}.svg`}
                                     style={{
-                                        height: '10vh',
+                                        height: '7vh',
                                         marginBottom: this.props.desktop ? '0px' : '2vh',
                                     }}
                                     alt={x}
