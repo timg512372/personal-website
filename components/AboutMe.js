@@ -6,11 +6,11 @@ const tech = [
     'C',
     'Java',
     'Python',
+    'Golang',
     'Xcode',
     'Android Studio',
     'Unity',
     'React',
-    'Redux',
     'Ionic',
     'NodeJS',
     'MongoDB',
@@ -49,7 +49,7 @@ const skills = [
         skill: 80,
     },
     {
-        name: 'Ethereum',
+        name: 'Ethereum Development',
         skill: 70,
     },
     {
@@ -57,7 +57,7 @@ const skills = [
         skill: 80,
     },
     {
-        name: 'HTML',
+        name: 'Data Analysis',
         skill: 70,
     },
     {
@@ -85,7 +85,7 @@ class AboutMe extends Component {
                 <Divider />
                 {/* <p style={{ fontFamily: 'Nunito', color: '#6c757d' }}>{`Who is this guy?`}</p> */}
                 <img
-                    src="/static/pfp.jpg"
+                    src="/static/pfp.png"
                     style={{
                         borderRadius: '50%',
                         height: '15vw',
@@ -93,7 +93,6 @@ class AboutMe extends Component {
                     }}
                     alt="me"
                 />
-
                 <h2 style={{ marginBottom: '-0.1em', fontSize: '180%' }}>
                     <span style={{ fontWeight: '400' }}>Hello!</span>{' '}
                     <span style={{ fontWeight: '600' }}>I'm Timothy Guo.</span>
@@ -131,7 +130,7 @@ class AboutMe extends Component {
                         textAlign: 'center',
                     }}
                 >
-                    {`I'm a Regents Scholar at UC Berkeley and co-founder and COO at Dime, a startup in decentralized blockchain gaming.` +
+                    {`I'm a Regents Scholar at UC Berkeley and Head of Internal at Blockchain at Berkeley, the nation's leading student blockchain organization.` +
                         ` I'm passionate about social entrepreneurship and helping people with knowledge and technology.`}
                 </div>
                 <div

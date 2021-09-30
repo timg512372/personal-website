@@ -9,7 +9,6 @@ import Button from 'grommet/components/Button';
 import { Transition } from 'react-transition-group';
 import anime from 'animejs';
 
-import '../styles.scss';
 import AboutMe from '../components/AboutMe';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
@@ -203,7 +202,7 @@ class Home extends Component {
                     >
                         <Button
                             label="Download CV"
-                            href="https://drive.google.com/file/d/1dsXlD7NW6g-aVm2p_6gBh3dUOGIeQZgq/view?usp=sharing"
+                            href="https://drive.google.com/uc?id=1eW4QkYAQNJJp1SQBHbOlklIi7bivGXQq&export=download"
                             style={{
                                 color: '#FFFFFF',
                                 borderRadius: '50px',

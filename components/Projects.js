@@ -28,7 +28,6 @@ const projects = [
             'Won 2019 Congressional App Challenge (CA-48)',
         ],
     },
-
     {
         title: 'Saddle Point',
         description:
@@ -49,6 +48,13 @@ const projects = [
             'TestFlow is an application that uses the blockchain to track each test kit, allowing patients, doctors, labs and the FDA to monitor the test kit’s location, verify authenticity, and view results.',
         img: '/static/testflow.png',
         href: 'https://testflow-covid19-hackathon.herokuapp.com/',
+    },
+    {
+        title: 'Dex Churn Analysis',
+        description:
+            "In my Dex Churn analysis, I use Dune Analytics to separate users in major dexes by cohort and analyze each cohort's behavior.",
+        href: 'https://dune.xyz/timg51237/Defi-Churn-Analysis',
+        img: '/static/uni.png',
     },
     {
         title: 'Sage Prosthetics Website',
@@ -114,7 +120,7 @@ class Projects extends Component {
                         display: 'flex',
                         flexDirection: 'row',
                         justifyContent: 'space-around',
-                        width: '80vw',
+                        width: '90vw',
                         flexWrap: 'wrap',
                         marginBottom: '-120px',
                     }}
@@ -160,7 +166,7 @@ class Projects extends Component {
                                 }
                                 link={<Anchor href={project.href} label="Learn More" />}
                                 key={project.title}
-                                style={{ marginTop: '30px' }}
+                                style={{ margin: '30px 0.7vw 0 0.7vw' }}
                             />
                         );
                     })}

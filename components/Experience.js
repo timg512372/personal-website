@@ -7,7 +7,7 @@ const experience = [
             date: '2020-2024',
             title: 'UC Berkeley',
             description:
-                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science. So far, I am a part of Blockchain at Berkeley and Debate Society of Berkeley.",
+                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science. I am a part of Blockchain at Berkeley and Debate Society of Berkeley.",
         },
         {
             date: '2016-2020',
@@ -36,13 +36,25 @@ const experience = [
     ],
     [
         {
-            date: '2020-present',
-            title: 'Full Stack Developer at Blockchain at Berkeley',
+            date: 'Summer 2021',
+            title: 'Summer Analyst at Galaxy Digital',
             description:
-                'As a developer in Blockchain at Berkeley, I led an internal project to create a decentralized tracker for COVID-19 vaccines. I also suggested reforms of new developer education.',
+                'As a Summer Analyst at Galaxy Digital, I wrote internal reports on cross-chain bridging, L2 scaling, proxy contracts, Eth 2.0, and London hard fork. ' +
+                'I also evaluated venture deals through market analysis and data parsing to verify profit projections. ' +
+                'As part of my research, I created and published an SQL analysis of churn rate and volume by user cohort in popular exchanges. ' +
+                'I also built a Node.js arbitrage bot (0.6% profit margin) and a Python copy-trading bot (8% profit margin)',
         },
         {
             date: '2020-present',
+            title: 'Head of Internal and Developer at Blockchain at Berkeley',
+            description:
+                'As a developer in Blockchain at Berkeley, I led an internal project to create a decentralized tracker ' +
+                'for COVID-19 vaccines. I spearheaded a smart contract architecture redesign for an open-source UNICEF consulting project. I also revamped internal training curriculum, sourced quality lecturers, and increased individual support. ' +
+                'I also researched distributed hash tables and implemented a novel DHT to improve security. ' +
+                'As Head of Internal, I managed org-wide recruitment, including redesigning our marketing and organizing and conducting interviews and deliberations for 100+ candidates. ',
+        },
+        {
+            date: '2020-2021',
             title: 'Blockchain Intern at Byte to Byte, LLC',
             description:
                 'As an intern with Byte to Byte, I wrote application back-ends using ' +
@@ -59,12 +71,12 @@ const experience = [
                 'We pitched our product to investors at Global Demo Day 2018. ' +
                 'Working with Dime gave me my first taste of entrepreneurship and Silicon Valley.',
         },
-        {
-            date: 'Summer 2019',
-            title: 'Marketing and Development Intern at Linden Educational Services',
-            description:
-                "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements.",
-        },
+        // {
+        //     date: 'Summer 2019',
+        //     title: 'Marketing and Development Intern at Linden Educational Services',
+        //     description:
+        //         "As an intern with Linden, I designed and implemented a variety of landing and RVSP pages for Linden's numerous events. I also wrote a case study on Linden's existing web solutions and proposed improvements.",
+        // },
     ],
 ];
 

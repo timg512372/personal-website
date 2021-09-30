@@ -1,8 +1,8 @@
-const withSass = require('@zeit/next-sass');
+const path = require('path');
 
-module.exports = withSass({
-    sassLoaderOptions: {
-        includePaths: ['./node_modules']
+module.exports = {
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
     },
     webpack(config, options) {
         // Further custom configuration here
@@ -11,9 +11,9 @@ module.exports = withSass({
             ...config,
             node: {
                 fs: 'empty',
-                child_process: 'empty'
-            }
+                child_process: 'empty',
+            },
         };
     },
-    target: 'serverless'
-});
+    target: 'serverless',
+};
