@@ -7,7 +7,7 @@ const experience = [
             date: '2020-2024',
             title: 'UC Berkeley',
             description:
-                "I will be attending UC Berkeley in the fall as a Regents and Chancellor's Scholar. I plan on majoring in EECS and Cognitive Science. I am a part of Blockchain at Berkeley and Debate Society of Berkeley.",
+                "I am currently attending UC Berkeley as a Regents and Chancellor's Scholar, majoring in EECS and Cognitive Science. Organizations: Blockchain at Berkeley, Debate Society of Berkeley, CalStar, HKN",
         },
         {
             date: '2016-2020',
@@ -35,6 +35,11 @@ const experience = [
         },
     ],
     [
+        {
+            date: 'Summer 2022',
+            title: 'Incoming SWE Intern at PayPal',
+            description: '',
+        },
         {
             date: 'Summer 2021',
             title: 'Summer Analyst at Galaxy Digital',

@@ -7,6 +7,7 @@ const tech = [
     'Java',
     'Python',
     'Golang',
+    'Rust',
     'Xcode',
     'Android Studio',
     'Unity',
