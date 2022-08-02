@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Particles from 'react-particles-js';
+import React, { Component, useRef } from 'react';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 import SocialFacebookOptionIcon from 'grommet/components/icons/base/SocialFacebookOption';
 import SocialLinkedinOptionIcon from 'grommet/components/icons/base/SocialLinkedinOption';
 import SocialGithubIcon from 'grommet/components/icons/base/SocialGithub';
@@ -125,14 +126,14 @@ class Home extends Component {
                 {this.props.desktop ? this.renderHeader() : null}
                 <div style={{ overflowY: 'scroll', height: '100vh' }} onScroll={this.handleScroll}>
                     <div style={{ color: 'white', textAlign: 'center' }} id="Home">
-                        {this.renderParticles()}
+                        {/* {this.renderParticles()} */}
                         <img
                             src="/static/background.jpg"
                             style={{
                                 height: '100vh',
                                 width: '100vw',
-                                marginTop: '-100vh',
-                                zIndex: -1,
+                                // marginTop: '-100vh',
+                                zIndex: '100',
                             }}
                             alt="background"
                         />
@@ -224,69 +225,85 @@ class Home extends Component {
         );
     }
 
+    particlesInit = async (main) => {
+        console.log(main);
+
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(main);
+    };
+
+    particlesLoaded = (container) => {
+        console.log(container);
+    };
+
     renderParticles = () => {
         return (
-            <Particles
-                className="particles"
-                style={{
-                    height: '100%',
-                    width: '100%',
-                    zIndex: -2,
-                }}
-                width="100vw"
-                height="98vh"
-                params={{
-                    particles: {
-                        number: {
-                            value: 200,
-                        },
-                        size: {
-                            value: 4,
-                            random: true,
-                        },
-                        opacity: {
-                            value: 0.9,
-                        },
-                        color: {
-                            value: '#FFFFFF',
-                        },
-                        move: {
-                            enable: true,
-                            direction: 'random',
-                            out_mode: 'out',
-                            bounce: false,
-                            speed: 10,
-                            random: false,
-                            attract: {
-                                enable: false,
-                                rotateX: 0,
-                                rotateY: 0,
+            <div style={{ width: '20vw', height: '20vh' }}>
+                <Particles
+                    className="particles"
+                    style={{
+                        zIndex: -2,
+                    }}
+                    width="20"
+                    // height="20vh"
+                    init={this.particlesInit}
+                    loaded={this.particlesLoaded}
+                    // container={getElement}
+                    options={{
+                        particles: {
+                            number: {
+                                value: 200,
                             },
-                        },
-                        line_linked: {
-                            distance: 100,
-                            color: '#FFFFFF',
-                            opacity: 0.4,
-                            width: 1.3,
-                        },
-                    },
-                    interactivity: {
-                        events: {
-                            onhover: {
+                            size: {
+                                value: 4,
+                                random: true,
+                            },
+                            opacity: {
+                                value: 0.9,
+                            },
+                            color: {
+                                value: '#FFFFFF',
+                            },
+                            move: {
                                 enable: true,
-                                mode: 'repulse',
+                                direction: 'random',
+                                out_mode: 'out',
+                                bounce: false,
+                                speed: 10,
+                                random: false,
+                                attract: {
+                                    enable: false,
+                                    rotateX: 0,
+                                    rotateY: 0,
+                                },
                             },
-                        },
-                        modes: {
-                            repulse: {
+                            line_linked: {
                                 distance: 100,
-                                duration: 1,
+                                color: '#FFFFFF',
+                                opacity: 0.4,
+                                width: 1.3,
                             },
                         },
-                    },
-                    retina_detect: true,
-                }}
-            />
+                        interactivity: {
+                            events: {
+                                onhover: {
+                                    enable: true,
+                                    mode: 'repulse',
+                                },
+                            },
+                            modes: {
+                                repulse: {
+                                    distance: 100,
+                                    duration: 1,
+                                },
+                            },
+                        },
+                        retina_detect: true,
+                    }}
+                />
+            </div>
         );
     };
 }
